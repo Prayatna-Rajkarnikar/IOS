@@ -42,9 +42,9 @@ class ShoeVC: UIViewController {
             // Configure the cell with data (replace with actual data model as needed)
             // change this method name
             cell.setupData(
-                image: UIImage(named: "metformin"),
-                name: "Metformin \(indexPath.row)",
-                price: "Rs. 500"
+                image: UIImage(named: "nike"),
+                name: "Air Jordan 1's ",
+                price: "Rs. 6500"
             )
             
             return cell
@@ -52,7 +52,7 @@ class ShoeVC: UIViewController {
         
         // Set size for each item
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 134, height: 128)  // Adjust size as needed
+            return CGSize(width: 320, height: 140)
         }
         
         // Handle selection of an item

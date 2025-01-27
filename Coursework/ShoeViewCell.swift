@@ -9,19 +9,27 @@ import UIKit
 
 class ShoeViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var MedicineImage: UIImageView!
+   
+    @IBOutlet weak var shoeImg: UIImageView!
+    @IBOutlet weak var shoePrice: UILabel!
+    @IBOutlet weak var shoeName: UILabel!
     
-    @IBOutlet weak var MedicineName: UILabel!
-    
-    @IBOutlet weak var MedicinePrice: UILabel!
-    
+    override func awakeFromNib() {
+            super.awakeFromNib()
+            
+            self.layer.cornerRadius = 20
+            self.layer.masksToBounds = true
+
+            shoeImg.layer.cornerRadius = 20
+            shoeImg.layer.masksToBounds = true
+        }
     
     func setupData(image: UIImage?, name: String?, price: String?){
         
-        self.MedicineImage.image = image
+        self.shoeImg.image = image
         
-        self.MedicineName.text = name
+        self.shoeName.text = name
         
-        self.MedicinePrice.text = price
+        self.shoePrice.text = price
     }
 }
